@@ -6,6 +6,6 @@ namespace Beer\Domain;
 
 use Shared\Domain\ValueObject\Date;
 
-final class BeerTagLine extends Date
+final class BeerFirstBrewed extends Date
 {
 }
