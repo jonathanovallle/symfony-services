@@ -1,0 +1,14 @@
+includes:
+    # @see https://github.com/phpstan/phpstan-src/blob/master/conf/bleedingEdge.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+    #- phpstan-baseline.neon
+parameters:
+    level: max
+    checkMissingIterableValueType: false
+    parallel:
+        processTimeout: 300.0
+    paths:
+        - src
+    tmpDir: tmp
+    fileExtensions:
+        - php

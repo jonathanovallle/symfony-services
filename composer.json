@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "guzzlehttp/guzzle": "^7.4",
+        "ramsey/uuid": "^4.2",
         "symfony/console": "5.4.*",
         "symfony/dotenv": "5.4.*",
         "symfony/flex": "^1.17|^2",
@@ -53,6 +54,12 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "phpstan": "phpstan analyse -c phpstan.neon src tests --level 6 --no-progress", 
+        "tests": "phpunit",    
+        "ci": [
+        "@phpstan",
+        "@tests"
         ]
     },
     "conflict": {
